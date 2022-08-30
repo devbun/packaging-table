@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topbar"><img src="logo.png"/ class="img-logo"></div>
+    <div class="undertop">
+        <div class="sidebar"> <img src="sidebar.png" class="img-sidebar"/></div>
+        <div class="main-section">
+            <div class="titlebar">Packaging Table</div>
+            <div class="working-area">
+                <div class="buttons-and-total">
+                    <div class="action-buttons">
+                        <span class="btn action-confirm">Confirm</span>
+                        <span class="btn action-modify">Modify</span>
+                        <span class="btn action-delete">Delete</span>
+                    </div>
+                    <div class="total-entries">
+                        Total Orders: 212
+                    </div>
+
+                </div>
+
+                <div class="advanced-filters">
+                    <span onclick="toggleFilters('filter-options')">+ Advanced Filters</span>
+                </div>
+
+                <div class="filter-options" id="filter-options">
+                    <div class="search-option">
+                        <div>filter option:</div>
+                        <div>
+                            <select id="cars" name="cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="fiat">Fiat</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <span class="btn">Filter</span>
+                </div>
+
+                <div class="show-and-search">
+                    <div class="show-orders">
+                        Show <input type="number" placeholder="10" class="number-of-orders"> Orders
+                    </div>
+                    <div class="searchbar">
+                        Search: <input type="text" name="" id="">
+                    </div>
+                </div>
+
+                <div class="main-table">
+                    <div class="table table-head">
+                        <div class="table-item table-header">S.No.</div>
+                        <div class="table-item table-header"><input type="checkbox" name="" id=""></div>
+                        <div class="table-item table-header">Ship On</div>
+                        <div class="table-item table-header">Ship By</div>
+                        <div class="table-item table-header">Priority</div>
+                        <div class="table-item table-header">Order Number</div>
+                        <div class="table-item table-header">Patient Name</div>
+                        <div class="table-item table-header">Medications</div>
+                        <div class="table-item table-header">Actions</div>
+                    </div>
+                    <div class="table table-body">
+                        <div class="table-item table-entry cursor" onclick="toggleFilters('additional-info')">
+                            <img src="expand.png" class="expand" alt="">
+                            1
+                        </div>
+                        <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                        <div class="table-item table-entry">
+                            <input type="text" 
+                                class="ship-on-date"
+                                value="2022-09-01" 
+                                onfocus="(this.type='date')">
+                        </div>
+                        <div class="table-item table-entry">
+                            <input type="text" 
+                                class="ship-on-date date-red"
+                                value="2022-08-25" 
+                                onfocus="(this.type='date')">
+                        </div>
+                        <div class="table-item table-entry">   
+                            <select id="Priority" name="Priorty">
+                                <option value="volvo" >RUSH</option>
+                                <option value="saab">Priority</option>
+                                <option value="fiat">Standard</option>
+                                <option value="audi">None</option>
+                                <option value="audi" >Problem</option>
+                            </select>
+                        </div>
+                        <div class="table-item table-entry">A071221</div>
+                        <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">Gladys Knight</a> </div>
+                        <div class="table-item table-entry">3 Inhalers - Flovent 110mcg<br>180 Tablets - Eliquis 5mg</div>
+                        <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                    </div>
+
+                    <div class="additional-info" id="additional-info">
+                        Submitted By: James Wee
+                        <hr>
+                        Confirmed On: August 20th, 2022 9:30 AM
+                        <hr>
+                        Split Ship:
+                        <hr>
+                        Linked Orders:
+                    </div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        2
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-01" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-03" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab">Priority</option>
+                            <option value="fiat">Standard</option>
+                            <option value="audi">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">
+                        <img src="snow.png" class="img25"/>
+                        S071207 2/3
+                    </div>
+                    <div class="table-item table-entry">
+                        <img src="rxfree.png" class="img50" alt="">
+                        <a href="http://" target="_blank" rel="noopener noreferrer">Mary Johnson</a> 
+                    </div>
+                    <div class="table-item table-entry">12 pens - Trulicity 1.5mg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        3
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-01" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-03" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab" selected="selected">Priority</option>
+                            <option value="fiat">Standard</option>
+                            <option value="audi">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">A071218</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">John McDonnell</a> </div>
+                    <div class="table-item table-entry">1 Inhaler - Flovent 110mcg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        4
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-01" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-03" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab" selected="selected">Priority</option>
+                            <option value="fiat">Standard</option>
+                            <option value="audi">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">A071217</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">Mary Kinneer</a> </div>
+                    <div class="table-item table-entry">180 Tablets - Eliquis</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        5
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-01" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-03" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab">Priority</option>
+                            <option value="fiat" selected="selected">Standard</option>
+                            <option value="audi">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">A071211</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">KRISTINA STOLTZ</a> </div>
+                    <div class="table-item table-entry">2 Boxes - Lupron Depot 1.5mg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        6
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-01" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-03" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab">Priority</option>
+                            <option value="fiat" selected="selected">Standard</option>
+                            <option value="audi">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">S071212</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">Ronald Provencher</a> </div>
+                    <div class="table-item table-entry">2 Inhalers - Stiolto Respimat 2.5mcg <br> 300 Tablets - Levitra 5mg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        7
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date date-red"
+                            value="2022-08-25" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date date-red"
+                            value="2022-08-27" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab">Priority</option>
+                            <option value="fiat">Standard</option>
+                            <option value="audi" >None</option>
+                            <option value="toyota" selected="selected" class="date-red">Problem</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">
+                        <img src="paw.png" class="img25"/>
+                        S067646</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">Jake Paul</a> </div>
+                    <div class="table-item table-entry">1 Inhalers - Flovent 44mcg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+                <div class="table table-body">
+                    <div class="table-item table-entry cursor" >
+                        <img src="expand.png" class="expand" alt="">
+                        7
+                    </div>
+                    <div class="table-item table-entry"><input type="checkbox" name="" id=""></div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date date-yellow"
+                            value="2022-09-02" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">
+                        <input type="text" 
+                            class="ship-on-date"
+                            value="2022-09-05" 
+                            onfocus="(this.type='date')">
+                    </div>
+                    <div class="table-item table-entry">   
+                        <select id="Priority" name="Priorty">
+                            <option value="volvo">RUSH</option>
+                            <option value="saab">Priority</option>
+                            <option value="fiat">Standard</option>
+                            <option value="audi" selected="selected">None</option>
+                        </select>
+                    </div>
+                    <div class="table-item table-entry">
+                        <img src="paw.png" class="img25"/>
+                        S071213</div>
+                    <div class="table-item table-entry"><a href="http://" target="_blank" rel="noopener noreferrer">Jordan Love</a> </div>
+                    <div class="table-item table-entry">3 Inhalers - Flovent 44mcg</div>
+                    <div class="table-item table-entry"><img src="actions.png" class="img-actions"/></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ 
+<script>
+    function toggleFilters(target) {
+  var x = document.getElementById(target);
+  if (x.style.display == "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
